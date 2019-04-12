@@ -1,0 +1,16 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html ng-app="boilerplate" ng-controller="siteController as siteCtrl">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title ng-bind="windowTitle"></title>
+    @Styles.Render("~/Content/core")
+</head>
+<body ng-init="init(@Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag))" ng-cloak layout="column">
+    <ui-view layout="column" flex></ui-view>
+    <!-- Scripts Definition -->
+    @Scripts.Render("~/Scripts/core", "~/App/main")
+</body>
+</html>
