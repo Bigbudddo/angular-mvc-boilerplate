@@ -56,11 +56,17 @@
             nakamaService.listNamaka().then(s => {
                 $timeout(function () {
                     console.log('fetched the data', s);
+
                     $scope.nakama = s.data;
+                    $scope.isLoading = false;
                 }, 150);
             }, e => {
                 console.error('there was a problem fetching the nakama!', e);
             });
+        }
+
+        $scope.convertMoney = function (money) {
+            return window.top.formatMoney(money, 0);
         }
     }
 })();

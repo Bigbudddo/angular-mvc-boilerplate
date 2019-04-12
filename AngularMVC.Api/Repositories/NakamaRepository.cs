@@ -9,16 +9,16 @@ namespace AngularMVC.Repositories {
     public sealed class NakamaRepository {
 
         private readonly List<Nakama> _nakamas = new List<Nakama>() {
-            new Nakama(1, "Monkey D. Luffy", "https://vignette.wikia.nocookie.net/onepiece/images/6/6d/Monkey_D._Luffy_Anime_Post_Timeskip_Infobox.png/revision/latest/scale-to-width-down/270?cb=20190124235416", "Captain"),
-            new Nakama(2, "Nami", "https://vignette.wikia.nocookie.net/onepiece/images/6/68/Nami_Anime_Post_Timeskip_Infobox.png/revision/latest/scale-to-width-down/270?cb=20160917032958", "Navigator"),
-            new Nakama(3, "Zoro", "https://vignette.wikia.nocookie.net/onepiece/images/5/52/Roronoa_Zoro_Anime_Post_Timeskip_Infobox.png/revision/latest/scale-to-width-down/270?cb=20141008195159", "Swordsman"),
-            new Nakama(4, "Usopp", "https://vignette.wikia.nocookie.net/onepiece/images/3/35/Usopp_Anime_Post_Timeskip_Infobox.png/revision/latest/scale-to-width-down/270?cb=20130708033601", "Sniper"),
-            new Nakama(5, "Sanji", "https://vignette.wikia.nocookie.net/onepiece/images/b/b6/Sanji_Anime_Post_Timeskip_Infobox.png/revision/latest/scale-to-width-down/270?cb=20170625125657", "Cook"),
-            new Nakama(6, "Chopper", "https://vignette.wikia.nocookie.net/onepiece/images/a/af/Tony_Tony_Chopper_Anime_Post_Timeskip_Infobox.png/revision/latest/scale-to-width-down/270?cb=20130428202154", "Doctor"),
-            new Nakama(7, "Robin", "https://vignette.wikia.nocookie.net/onepiece/images/b/bc/Nico_Robin_Anime_Post_Timeskip_Infobox.png/revision/latest/scale-to-width-down/270?cb=20190202051257", "Archaeologist"),
-            new Nakama(8, "Franky", "https://vignette.wikia.nocookie.net/onepiece/images/8/8c/Franky_Anime_Post_Timeskip_Infobox.png/revision/latest/scale-to-width-down/270?cb=20130225034035", "Shipwright"),
-            new Nakama(9, "Brook", "https://vignette.wikia.nocookie.net/onepiece/images/4/41/Brook_Anime_Post_Timeskip_Infobox.png/revision/latest/scale-to-width-down/270?cb=20161016160925", "Musician"),
-            new Nakama(10, "Jinbe", "https://vignette.wikia.nocookie.net/onepiece/images/8/81/Jinbe_Anime_Infobox.png/revision/latest/scale-to-width-down/270?cb=20170521201349", "Helmsman")
+            new Nakama(1, "Monkey D. Luffy", "https://vignette.wikia.nocookie.net/onepiece/images/f/f9/Monkey_D._Luffy%27s_Current_Wanted_Poster.png/revision/latest?cb=20190409101044", "Captain", 1500000000),
+            new Nakama(2, "Zoro", "https://vignette.wikia.nocookie.net/onepiece/images/5/5d/Roronoa_Zoro%27s_Current_Wanted_Poster.png/revision/latest?cb=20161222000618", "Swordsman", 320000000),
+            new Nakama(3, "Nami", "https://vignette.wikia.nocookie.net/onepiece/images/3/3b/Nami%27s_Current_Wanted_Poster.png/revision/latest?cb=20160619204508", "Navigator", 66000000),
+            new Nakama(4, "Usopp", "https://vignette.wikia.nocookie.net/onepiece/images/5/5e/God_Usopp%27s_Wanted_Poster.png/revision/latest?cb=20160619204644", "Sniper", 200000000),
+            new Nakama(5, "Sanji", "https://vignette.wikia.nocookie.net/onepiece/images/c/ca/Sanji%27s_Current_Wanted_Poster.png/revision/latest?cb=20190331050119", "Cook", 330000000),
+            new Nakama(6, "Chopper", "https://vignette.wikia.nocookie.net/onepiece/images/7/75/Tony_Tony_Chopper%27s_Current_Wanted_Poster.png/revision/latest?cb=20160619204650", "Doctor", 100),
+            new Nakama(7, "Robin", "https://vignette.wikia.nocookie.net/onepiece/images/b/b8/Nico_Robin%27s_Current_Wanted_Poster.png/revision/latest?cb=20161222000656", "Archaeologist", 130000000),
+            new Nakama(8, "Franky", "https://vignette.wikia.nocookie.net/onepiece/images/e/e0/Cyborg_Franky%27s_Wanted_Poster.png/revision/latest?cb=20160619204639", "Shipwright", 94000000),
+            new Nakama(9, "Brook", "https://vignette.wikia.nocookie.net/onepiece/images/0/09/Brook%27s_Concert_Wanted_Poster.png/revision/latest?cb=20160619204634", "Musician", 83000000),
+            new Nakama(10, "Jinbe", "https://vignette.wikia.nocookie.net/onepiece/images/3/34/Jinbe%27s_Wanted_Poster.png/revision/latest?cb=20180731164329", "Helmsman", 438000000)
         };
 
         public Nakama GetNakama(int nakamaId) {
