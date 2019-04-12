@@ -4,7 +4,8 @@
     angular
         .module('boilerplate')
         .controller('siteController', SiteController)
-        .controller('dashboardController', DashboardController);
+        .controller('dashboardController', DashboardController)
+        .controller('nakamaController', NakamaController);
 
     SiteController.$inject = ['$scope', '$state'];
     function SiteController($scope, $state) {
@@ -36,11 +37,29 @@
                     console.error('unable to navigation to base state as it has not been provided!');
                 }
             }
-        };
+        }
     }
 
-    DashboardController.$inject = ['$scope'];
-    function DashboardController($scope) {
+    DashboardController.$inject = ['$scope', '$timeout', 'nakamaService'];
+    function DashboardController($scope, $timeout, nakamaService) {
+
+        $scope.nakama = [];
+        $scope.isLoading = true;
+
+        this.$onInit = function () {
+            nakamaService.listNamaka().then(s => {
+                $timeout(function () {
+                    console.log('fetched the data', s);
+                    $scope.nakama = s.data;
+                }, 150);
+            }, e => {
+                console.error('there was a problem fetching the nakama!', e);
+            });
+        }
+    }
+
+    NakamaController.$inject = ['$scope'];
+    function NakamaController($scope) {
 
     }
 })();

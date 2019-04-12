@@ -105,6 +105,7 @@
     <Content Include="App\controllers\HomeController.js" />
     <Content Include="App\http.js" />
     <Content Include="App\routes.js" />
+    <Content Include="App\services\nakamaService.js" />
     <Content Include="Content\bulma.css" />
     <Content Include="Content\bulma.min.css" />
     <Content Include="Content\site.css" />
@@ -152,6 +153,7 @@
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Dashboard.cshtml" />
+    <Content Include="Views\Home\Nakama.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -163,7 +165,6 @@
     <Folder Include="App\components\" />
     <Folder Include="App\directives\" />
     <Folder Include="App\filters\" />
-    <Folder Include="App\services\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
