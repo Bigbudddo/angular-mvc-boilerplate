@@ -43,6 +43,12 @@
     DashboardController.$inject = ['$scope', '$timeout', 'nakamaService'];
     function DashboardController($scope, $timeout, nakamaService) {
 
+        
+    }
+
+    NakamaController.$inject = ['$scope', '$timeout', 'nakamaService'];
+    function NakamaController($scope, $timeout, nakamaService) {
+
         $scope.nakama = [];
         $scope.isLoading = true;
 
@@ -56,10 +62,5 @@
                 console.error('there was a problem fetching the nakama!', e);
             });
         }
-    }
-
-    NakamaController.$inject = ['$scope'];
-    function NakamaController($scope) {
-
     }
 })();

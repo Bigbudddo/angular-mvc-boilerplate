@@ -8,10 +8,10 @@
         return {
             request: function (config) {
                 // so we only want to push these headers when we are going to our web-api
-                if (config.url.startsWith(webApiUrl)) {
-                    config.headers['Authorization'] = 'Basic <<TOKEN HERE>>';
-                    config.headers['Accept'] = 'application/json;odata=verbose';
-                }
+                //if (config.url.startsWith(webApiUrl)) {
+                //    config.headers['Authorization'] = 'Basic <<TOKEN HERE>>';
+                //    config.headers['Accept'] = 'application/json;odata=verbose';
+                //}
 
                 return config;
             }
