@@ -6,7 +6,7 @@ using System.Web;
 
 namespace AngularMVC.Repositories {
 
-    public sealed class NakamaRepository {
+    public sealed class NakamaRepository : INakamaRepository {
 
         private readonly List<Nakama> _nakamas = new List<Nakama>() {
             new Nakama(1, "Monkey D. Luffy", "https://vignette.wikia.nocookie.net/onepiece/images/f/f9/Monkey_D._Luffy%27s_Current_Wanted_Poster.png/revision/latest?cb=20190409101044", "Captain", 1500000000),

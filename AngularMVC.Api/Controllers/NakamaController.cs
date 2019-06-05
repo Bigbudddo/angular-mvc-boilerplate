@@ -12,21 +12,25 @@ namespace AngularMVC.Api.Controllers {
 
     public class NakamaController : ApiController {
 
+		private INakamaRepository _nakamaRepository;
+
         [HttpGet]
         [ResponseType(typeof (Nakama))]
         [Route("api/nakama")]
         [Route("api/nakama/{nakamaId}")]
         public IHttpActionResult GetNakama(int nakamaId) {
-            var repo = new NakamaRepository();
-            return Ok(repo.GetNakama(nakamaId));
+            return Ok(_nakamaRepository.GetNakama(nakamaId));
         }
 
         [HttpGet]
         [ResponseType(typeof (List<Nakama>))]
         [Route("api/nakama/all")]
         public IHttpActionResult GetAllNakama() {
-            var repo = new NakamaRepository();
-            return Ok(repo.GetNakamas());
+            return Ok(_nakamaRepository.GetNakamas());
         }
+
+		public NakamaController(INakamaRepository nakamaRepository) {
+			_nakamaRepository = nakamaRepository;
+		}
     }
 }
