@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SqlKata;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,13 +11,13 @@ namespace AngularMVC.Models {
     public sealed class Nakama {
 
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public int ObjectID { get; set; }
 
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string CrewName { get; set; }
 
         [JsonProperty("image_url")]
-        public string ImageUrl { get; set; }
+        public string WantedPoster { get; set; }
 
         [JsonProperty("crew_position")]
         public string CrewPosition { get; set; }
@@ -24,15 +25,15 @@ namespace AngularMVC.Models {
         [JsonProperty("bounty")]
         public int Bounty { get; set; }
 
-        [JsonProperty("description")]
-        public string Description { get; set; }
+        //[JsonProperty("description")]
+        //public string Description { get; set; }
 
         public Nakama() { }
 
         public Nakama(int id, string name, string url, string position, int bounty) {
-            Id = id;
-            Name = name;
-            ImageUrl = url;
+			ObjectID = id;
+			CrewName = name;
+            WantedPoster = url;
             CrewPosition = position;
             Bounty = bounty;
         }

@@ -1,6 +1,10 @@
 ﻿using AngularMVC.Models;
+using SqlKata;
+using SqlKata.Compilers;
+using SqlKata.Execution;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -22,11 +26,20 @@ namespace AngularMVC.Repositories {
         };
 
         public Nakama GetNakama(int nakamaId) {
-            return _nakamas.FirstOrDefault<Nakama>(x => x.Id == nakamaId);
+            return _nakamas.FirstOrDefault<Nakama>(x => x.ObjectID == nakamaId);
         }
 
         public IEnumerable<Nakama> GetNakamas() {
-            return _nakamas;
+            //return _nakamas;
+			try {
+				var connection = new SqlConnection("Data Source=c:\\angularMVC.sqlite;");
+				var compiler = new SqliteCompiler();
+
+				var db = new QueryFactory(connection, compiler);
+				return db.Query("Nakama").Get<Nakama>();
+			} catch (Exception ex) {
+				return new List<Nakama>();
+			}
         }
     }
 }
